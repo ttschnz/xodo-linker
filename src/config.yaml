@@ -1,0 +1,14 @@
+security:
+    force_loopback: true # ignores all requests that are not loopback (=> localhost) if true
+    blacklist: # ignores specific urls
+        - "/favicon\\.ico"
+    whitelist: # allows specific urls (overwrites blacklist)
+        - ".*\\.pdf"
+server:
+    addr: 0.0.0.0
+    port: 80
+    close_tab: true
+system:
+    hostname: xodo # will be added to hosts-file to link to localhost. http://xodo/file.pdf will then open the file locally. # TODO
+    base_path: "{{home_dir}}\\OneDrive\\ONEDRI~1" # to this path file.pdf will be added then opened. points to the first onedrive directory in the users folder
+    program: dummy # TODO
